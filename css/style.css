@@ -1,6 +1,17 @@
 /*
 Reset structure
 */
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../../medias/font/lato_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Lato Regular", Georgia, "Times New Roman", Times, serif;
+}
+
 a {
   text-decoration: none;
   outline: none;
@@ -17,15 +28,105 @@ ul {
 }
 
 h1 {
-  font-size: 3.2rem;
-}
-
-h2 {
   font-size: 3rem;
 }
 
+h2 {
+  font-size: 2.8rem;
+}
+
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+/*
+Header - General Structure
+*/
+header .company-logo {
+  width: 5rem;
+}
+header .nav-item:nth-child(2),
+header .nav-item:nth-child(3),
+header .nav-item:nth-child(4),
+header .nav-item:last-child {
+  padding-left: 1.5rem;
+}
+header .nav-link {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+header .navbar-nav {
+  text-align: right;
+}
+
+/* 
+Footer - General structure
+ */
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+/*
+Header & section - General structure
+*/
+.common-content {
+  background-image: url("../medias/img/burger_plate.jpg");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: #ffffff;
+  padding: 0 4rem;
+}
+
+/*
+Promotion presentation section - General structure
+*/
+.promotion-presentation {
+  color: #ffffff;
+  padding: 5rem 0;
+}
+
+/*
+Team presentation section - General Structure
+*/
+#team-presentation {
+  background-image: url("../medias/img/food_illustration.jpg");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: #F44E46;
+  padding: 8rem 0;
+}
+#team-presentation p,
+#team-presentation figcaption b {
+  font-size: 1.2rem;
+}
+#team-presentation span::before {
+  content: "\a";
+  white-space: pre;
+}
+#team-presentation #team-presentation__figures figcaption {
+  color: #F44E46;
+}
+#team-presentation #team-presentation__figures figcaption span {
+  font-size: 1.2rem;
+}
+
+/*
+Best burger presentation section - General structure
+*/
+.best-burger {
+  color: #ffffff;
+  padding: 8rem 0;
+}
+.best-burger #burger__img {
+  width: 30rem;
+  padding-right: 5rem;
 }
 
 /*
@@ -44,12 +145,8 @@ footer .fa-twitter {
 /*
 Bootstrap general content
 */
-.card {
-  padding-top: 5rem;
-}
-
 .card-text {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 /*
@@ -57,6 +154,16 @@ Promotion presentation - Bootstrap content
 */
 .promotion-presentation .card {
   background: transparent;
+}
+@media (max-width: 576px) {
+  .promotion-presentation .card {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .promotion-presentation .card-text {
+    margin-right: 5rem;
+  }
 }
 .promotion-presentation .btn {
   background-color: #F44E46;
@@ -73,9 +180,27 @@ Promotion presentation - Bootstrap content
 Best burger presentation section - Bootstrap content
 */
 .best-burger .card {
-  background-color: #F44E46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: transparent;
   flex-direction: row;
-  border: none;
+}
+@media (max-width: 1200px) {
+  .best-burger .card {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 992px) {
+  .best-burger .card {
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.best-burger h3 {
+  margin-bottom: 5rem;
 }
 .best-burger .btn {
   color: #F44E46;
@@ -84,85 +209,80 @@ Best burger presentation section - Bootstrap content
   padding: 0.5rem 3rem;
 }
 
-/* 
-Footer - General structure
- */
-footer {
-  background-color: #222222;
-  color: #ffffff;
+/*
+Header animation
+*/
+.animate__fadeIn {
+  animation-duration: 1.5s;
 }
 
 /*
-Header & section - General structure
+Promotion presentation section animation
 */
-.common-content {
-  background-image: url("../medias/img/burger_plate.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: #ffffff;
-  padding: 0 3rem;
-}
-.common-content .company-logo {
-  width: 5rem;
-}
-.common-content .nav-item:nth-child(2),
-.common-content .nav-item:nth-child(3),
-.common-content .nav-item:nth-child(4),
-.common-content .nav-item:last-child {
-  padding-left: 1.5rem;
-}
-.common-content .nav-link {
-  font-size: 1.3rem;
-  color: #ffffff;
-}
-.common-content .navbar-nav {
-  text-align: right;
-}
-.common-content a:hover {
-  color: #d3d3d3;
+.animate__backInLeft {
+  animation-duration: 2s;
 }
 
 /*
-Promotion presentation section - General structure
+Team presentation section animation
 */
-.promotion-presentation {
-  color: #ffffff;
-  padding: 5rem 0;
+.tracking-in-expand {
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*
-Team presentation section - General Structure
+Best burger section animation
 */
-.team-presentation {
-  background-image: url("../medias/img/food_illustration.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: #F44E46;
-  padding: 8rem 0;
-}
-.team-presentation p, .team-presentation figcaption b {
-  font-size: 1.3rem;
-}
-.team-presentation span::before {
-  content: "\a";
-  white-space: pre;
-}
-.team-presentation .team-presentation__figures figcaption {
-  color: #F44E46;
-}
-.team-presentation .team-presentation__figures figcaption span {
-  font-size: 1.2rem;
+.color-change-2x {
+  animation: color-change-2x 2s linear infinite alternate both;
 }
 
-/*
-Best burger presentation section - General structure
-*/
-.best-burger {
-  color: #ffffff;
-  background-color: #F44E46;
-  padding: 8rem 0;
+@keyframes color-change-2x {
+  0% {
+    background: #F44E46;
+  }
+  100% {
+    background: #861e06;
+  }
 }
-.best-burger #burger__img {
-  width: 30rem;
-  margin-right: 5rem;
+@media only screen and (max-width: 992px) {
+  #burger__img {
+    width: 25rem;
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    display: none;
+  }
+  .common-content {
+    background-image: url("../medias/img/burger_plate_responsive.png");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #team-presentation {
+    background-image: url("../medias/img/food_illustration_responsive.png");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  #team-presentation p {
+    margin: 0 2rem;
+  }
+  #team-presentation .ethel-ramsay__img {
+    margin: 3.5rem 0;
+  }
 }/*# sourceMappingURL=style.css.map */

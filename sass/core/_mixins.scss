@@ -3,9 +3,9 @@
     white-space: pre;
 }
 
-@mixin backgroundImage() {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+@mixin backgroundImage($size) {
+    background-attachment: fixed;
+    background-size: $size;
 }
 
 @mixin btnFormat() {

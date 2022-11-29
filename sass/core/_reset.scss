@@ -1,16 +1,28 @@
-@use 'variables' as v;
+@use 'colors' as c;
 
 /*
 Reset structure
 */
+@font-face {
+    font-family: 'Lato Regular';
+    src: url('../../medias/font/lato_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Lato Regular', Georgia, 'Times New Roman', Times, serif;
+}
+
 a {
     text-decoration: none;
     outline: none;
-    color: v.$first-color;
+    color: c.$main-text-color;
 }
 
 a:hover {
-    color: v.$fourth-color;
+    color: c.$main-hyperlink-color;
     transition: 0.2s ease-in;
 }
 
@@ -19,13 +31,17 @@ ul {
 }
 
 h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
 }
 
-                h2 {
-                    font-size: 3rem;
-                }
+h2 {
+    font-size: 2.8rem;
+}
         
-                h3 {
-                    font-size: 2rem;
-                }
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}

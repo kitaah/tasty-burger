@@ -1,9 +1,16 @@
-@use 'variables' as v;
+@use 'colors' as c;
+@use 'breakpoints' as b;
 
 /* 
 Footer - General structure
  */
 footer {
-    background-color: v.$third-color;
-    color: v.$first-color;
+    display: flex;
+    justify-content: center;
+    background-color: c.$background-color;
+    color: c.$main-text-color;
 }
+
+
+
+

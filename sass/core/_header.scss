@@ -1,5 +1,5 @@
-@use './core/variables' as v;
-@use './core/mixins' as m;
+@use 'colors' as c;
+@use 'mixins' as m;
 
 /*
 Header - General Structure
@@ -17,8 +17,8 @@ header {
     }
     
     .nav-link {
-        font-size: 1.3rem;
-        color: v.$first-color;
+        font-size: 1.1rem;
+        color: c.$main-text-color;
     }
     
     .navbar-nav {

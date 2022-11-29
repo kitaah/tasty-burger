@@ -1,0 +1,62 @@
+@use 'colors' as c;
+@use 'mixins' as m;
+
+/*
+Header & section - General structure
+*/
+.common-content {
+    background-image: url("../medias/img/burger_plate.jpg");
+    @include m.backgroundImage(100% 100%);
+    color: c.$main-text-color;
+    padding: 0 4rem;
+}
+
+/*
+Promotion presentation section - General structure
+*/
+.promotion-presentation {
+    color: c.$main-text-color;
+    padding: 5rem 0;
+}
+
+/*
+Team presentation section - General Structure
+*/
+#team-presentation {
+    background-image: url("../medias/img/food_illustration.jpg");
+    @include m.backgroundImage(100% 100%);
+    color: c.$second-text-color;
+    padding: 8rem 0;
+
+    p,
+    figcaption b {
+        font-size: 1.2rem;
+    }
+
+    span::before {
+        @include m.lineBreak();
+    }
+
+    #{&}__figures {
+        figcaption {
+            color: c.$second-text-color;
+        }
+
+        figcaption span {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/*
+Best burger presentation section - General structure
+*/
+.best-burger {
+    color: c.$main-text-color;
+    padding: 8rem 0;
+
+    #burger__img {
+        width: 30rem;
+        padding-right: 5rem;
+    }
+}

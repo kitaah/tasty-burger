@@ -1,0 +1,35 @@
+@use 'breakpoints' as b;
+@use 'mixins' as m;
+
+@media only screen and (max-width: b.$lg) {
+    #burger__img {
+        width: 25rem;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: b.$md) {
+    footer {
+        display: none;
+    }
+
+    .common-content {
+        background-image: url("../medias/img/burger_plate_responsive.png");
+        @include m.backgroundImage(cover);
+    }
+}
+
+@media only screen and (max-width: b.$sm) {
+#team-presentation {
+    background-image: url("../medias/img/food_illustration_responsive.png");
+    @include m.backgroundImage(100% 100%);
+
+        p {
+            margin: 0 2rem;
+        }
+
+        .ethel-ramsay__img {
+            margin: 3.5rem 0;
+        }
+    }
+}

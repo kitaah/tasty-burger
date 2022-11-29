@@ -1,15 +1,12 @@
-@use 'variables' as v;
+@use 'colors' as c;
+@use 'breakpoints' as b;
 @use 'mixins' as m;
 
 /*
 Bootstrap general content
 */
-.card {
-    padding-top: 5rem;
-}
-
 .card-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 /*
@@ -18,16 +15,25 @@ Promotion presentation - Bootstrap content
 .promotion-presentation {
     .card {
         background: transparent;
+        @media (max-width: b.$sm) {
+            text-align: center;
+        }
+    }
+
+    .card-text{
+        @media (max-width: b.$sm) {
+            margin-right: 5rem;
+        }
     }
 
     .btn {
-        background-color: v.$second-color;
-        color: v.$first-color;
+        background-color: c.$second-text-color;
+        color: c.$main-text-color;
         @include m.btnFormat();
     }
 
     .btn:hover {
-        background-color: #ffa500;
+        background-color: c.$second-hyperlink-color;
     }
 }
 
@@ -36,13 +42,29 @@ Best burger presentation section - Bootstrap content
 */
 .best-burger {
     .card {
-        background-color: v.$second-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background: transparent;
         flex-direction: row;
-        border: none;
+
+    @media (max-width: b.$xl) {
+            padding: 0 5rem;
+        }
+    @media (max-width: b.$lg) {
+        padding: 0;
+        flex-direction: column;
+        text-align: center;
+        }
+    }
+
+    h3 {
+        margin-bottom: 5rem;
     }
 
     .btn {
-        color: v.$second-color;
+        color: c.$second-text-color;
         @include m.btnFormat();
     }
 }
