@@ -1,0 +1,48 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+/*
+Bootstrap general content
+*/
+.card {
+    padding-top: 5rem;
+}
+
+.card-text {
+    font-size: 1.4rem;
+}
+
+/*
+Promotion presentation - Bootstrap content
+*/
+.promotion-presentation {
+    .card {
+        background: transparent;
+    }
+
+    .btn {
+        background-color: v.$second-color;
+        color: v.$first-color;
+        @include m.btnFormat();
+    }
+
+    .btn:hover {
+        background-color: #ffa500;
+    }
+}
+
+/*
+Best burger presentation section - Bootstrap content
+*/
+.best-burger {
+    .card {
+        background-color: v.$second-color;
+        flex-direction: row;
+        border: none;
+    }
+
+    .btn {
+        color: v.$second-color;
+        @include m.btnFormat();
+    }
+}

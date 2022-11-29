@@ -1,0 +1,32 @@
+@use './core/variables' as v;
+@use './core/mixins' as m;
+
+/*
+Header - General Structure
+*/
+header {
+    .company-logo {
+        width: 5rem;
+    }
+    
+    .nav-item:nth-child(2),
+    .nav-item:nth-child(3),
+    .nav-item:nth-child(4),
+    .nav-item:last-child {
+        padding-left: 1.5rem;
+    }
+    
+    .nav-link {
+        font-size: 1.3rem;
+        color: v.$first-color;
+    }
+    
+    .navbar-nav {
+        text-align: right;
+    }
+}
+
+
+
+
+

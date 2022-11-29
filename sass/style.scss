@@ -1,0 +1,75 @@
+@use './core/reset';
+@use './core/variables' as v;
+@use './core/breakpoints' as b;
+@use './core/mixins' as m;
+@use './core/fontawesome';
+@use './core/bootstrap';
+@use './core/header';
+@use './core/footer';
+
+/*
+Header & section - General structure
+*/
+.common-content {
+    background-image: url("../medias/img/burger_plate.jpg");
+    @include m.backgroundImage();
+    color: v.$first-color;
+    padding: 0 3rem;
+}
+
+/*
+Promotion presentation section - General structure
+*/
+.promotion-presentation {
+    color: v.$first-color;
+    padding: 5rem 0;
+}
+
+/*
+Team presentation section - General Structure
+*/
+.team-presentation {
+    background-image: url("../medias/img/food_illustration.jpg");
+    @include m.backgroundImage();
+    color: v.$second-color;
+    padding: 8rem 0;
+
+    p, figcaption b {
+        font-size: 1.3rem;
+    }
+
+    span::before {
+        @include m.lineBreak();
+    }
+
+    #{&}__figures {
+        figcaption {
+            color: v.$second-color;
+        }
+    
+        figcaption span {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/*
+Best burger presentation section - General structure
+*/
+.best-burger {
+    color: v.$first-color;
+    background-color: v.$second-color;
+    padding: 8rem 0;
+
+    #burger__img {
+        width: 30rem;
+        margin-right: 5rem;
+    }
+}
+
+
+
+
+
+
+

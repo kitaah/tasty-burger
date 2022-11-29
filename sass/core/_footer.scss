@@ -1,0 +1,9 @@
+@use 'variables' as v;
+
+/* 
+Footer - General structure
+ */
+footer {
+    background-color: v.$third-color;
+    color: v.$first-color;
+}

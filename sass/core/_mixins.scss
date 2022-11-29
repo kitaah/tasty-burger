@@ -1,0 +1,16 @@
+@mixin lineBreak() {
+    content: "\a";
+    white-space: pre;
+}
+
+@mixin backgroundImage() {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin btnFormat() {
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    padding: 0.5rem 3rem;
+}
+
