@@ -1,6 +1,11 @@
 /*
 Reset structure
 */
+html,
+body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: "Lato Regular";
   src: url("../../medias/font/lato_regular.ttf") format("truetype");
