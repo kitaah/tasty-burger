@@ -53,8 +53,11 @@ Best burger presentation section - General structure
     color: c.$main-text-color;
     padding: 8rem 0;
 
-    #burger__img {
+    span::before {
+            @include m.lineBreak();
+        }
+
+    img {
         width: 30rem;
-        padding-right: 5rem;
     }
 }
