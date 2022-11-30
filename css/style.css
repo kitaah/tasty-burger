@@ -33,19 +33,19 @@ ul {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.7rem;
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
 }
 
 /*
@@ -115,10 +115,10 @@ Team presentation section - General Structure
   content: "\a";
   white-space: pre;
 }
-#team-presentation #team-presentation__figures figcaption {
+#team-presentation figcaption {
   color: #F44E46;
 }
-#team-presentation #team-presentation__figures figcaption span {
+#team-presentation figcaption span {
   font-size: 1.2rem;
 }
 
@@ -279,6 +279,12 @@ Best burger section animation
   }
 }
 @media only screen and (max-width: 576px) {
+  .promotion-presentation .card {
+    text-align: center;
+  }
+  .promotion-presentation .card-text {
+    margin-right: 5rem;
+  }
   #team-presentation {
     background-image: url("../medias/img/food_illustration_responsive.png");
     background-attachment: fixed;

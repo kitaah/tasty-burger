@@ -37,14 +37,12 @@ Team presentation section - General Structure
         @include m.lineBreak();
     }
 
-    #{&}__figures {
-        figcaption {
-            color: c.$second-text-color;
-        }
+    figcaption {
+        color: c.$second-text-color;
+    }
 
-        figcaption span {
-            font-size: 1.2rem;
-        }
+    figcaption span {
+        font-size: 1.2rem;
     }
 }
 
