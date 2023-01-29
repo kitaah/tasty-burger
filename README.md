@@ -15,6 +15,7 @@ Le site internet est accessible à tout visiteur à l'adresse suivante:
 
 - **Front-end:** HTML, CSS, JavaScript, SASS (avec framework CSS Bootstrap, librairie d'icônes Fontawesome et librairie JavaScript AOS)
 
+
 ## Outils
 
 - **IDE:** Visual Studio code
