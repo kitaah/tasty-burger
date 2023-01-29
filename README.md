@@ -8,7 +8,7 @@ Afin de me perfectionner sur Bootstrap et d'apprendre à utiliser SASS, j'ai ré
 ## Liens du site
 
 Le site internet est accessible à tout visiteur à l'adresse suivante:
- - [https://kitaah.github.io/tasty-burger/](Page Tasty Burger)
+ - [https://kitaah.github.io/tasty-burger](Page Tasty Burger)
 
 ## Langages
 
