@@ -13,10 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  font-family: "Lato Regular", Georgia, "Times New Roman", Times, serif;
-}
-
 a {
   text-decoration: none;
   outline: none;
