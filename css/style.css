@@ -13,13 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-@font-face {
-  font-family: "Lato Regular";
-  src: url("../../medias/font/lato_regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 body {
   font-family: "Lato Regular", Georgia, "Times New Roman", Times, serif;
 }
@@ -243,7 +236,7 @@ Best burger section animation
 }
 @media only screen and (max-width: 768px) {
   html,
-body {
+  body {
     height: 100%;
     width: 100%;
     margin: 0;
